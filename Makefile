@@ -12,7 +12,8 @@ clean:
 	rm -rf $(SITE_DIR)
 
 build: clean
-	npm run build
+	#npm run build
+	npx @11ty/eleventy --quiet
 
 checkpoint:
 	git add .
