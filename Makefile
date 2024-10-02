@@ -6,7 +6,7 @@ TARGET=server03.baty.net
 .POSIX:
 .PHONY: build checkpoint deploy clean
 
-# npx -y pagefind --source public
+# npx -y pagefind --source ${SITE_DIR}
 
 clean:
 	rm -rf $(SITE_DIR)
@@ -20,6 +20,6 @@ checkpoint:
 
 deploy: build checkpoint
 	git push
- 	@echo "\033[0;32mDeploying updates to $(TARGET)...\033[0m"
- 	rsync -v -rz --checksum --delete --no-perms $(SITE_DIR) $(SERVER_HOST):$(SERVER_DIR)
+	@echo "\033[0;32mDeploying updates to $(TARGET)...\033[0m"
+	rsync -v -rz --checksum --delete --no-perms $(SITE_DIR) $(SERVER_HOST):$(SERVER_DIR)
 
