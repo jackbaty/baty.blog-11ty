@@ -23,7 +23,7 @@ I copied the theme's shortcode to ./layouts/shortcodes/figure.html and added two
 
 I don't understand Hugo's templating language at all, but I think what this does is look for a file in the page bundle that matches the figure shortcode's `src` attribute. The problem is that if there isn't one, the site won't build, so I added a quick and dirty conditional to my copy of the shortcode template:
 
-```
+```html
 <img loading="lazy" src="{ {- if $img } }{ { $img.Permalink } }{ { else } }{ { .Get "src" } }{ { end -} }...
 ```
 
