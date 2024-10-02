@@ -1,6 +1,6 @@
 module.exports = {
 	"title": "~/Baty.net",
-	"url": "https://baty.net",
+	"baseurl": "https://baty.net",
 	"language": "en",
 	"description": "Jack Baty's personal blog",
 	"author": {

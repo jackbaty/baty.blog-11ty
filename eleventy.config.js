@@ -18,7 +18,7 @@ export default async function(eleventyConfig) {
 	// For example, `./public/css/` ends up in `_site/css/`
 	eleventyConfig.addPassthroughCopy({
 		"./static/": "/",
-		"./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css"
+		"./node_modules/prismjs/themes/prism-okaidia.css": "/assets/css/prism-okaidia.css"
 	});
 
 	// Run Eleventy when these files change:
@@ -30,7 +30,11 @@ export default async function(eleventyConfig) {
 	// App plugins
 	//eleventyConfig.addPlugin(require("./eleventy.config.drafts.js"));
 	//eleventyConfig.addPlugin(require("./eleventy.config.images.js"));
-
+	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
+		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+			return false;
+		}
+	});
 
 	// Official plugins
 
