@@ -6,7 +6,7 @@
 		<title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 	    <link rel="stylesheet" href="/css/fonts.css" type="text/css" charset="utf-8" />
-
+			<link rel="stylesheet" href="/css/markdown-alert.css" type="text/css" charset="utf-8" />
 
 		{#- Atom and JSON feeds #}
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
@@ -31,7 +31,7 @@
 
 		{#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
 		<style>{% getBundle "css" %}</style>
-		<script defer data-domain="baty.net" src="https://plausible.io/js/script.js"></script>
+
 	</head>
 	<body>
 		<div id="page-top">
@@ -55,7 +55,7 @@
 				{%- for entry in collections.all | eleventyNavigation %}
 					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 				{%- endfor %}
-					<li class="nav-item"><a href="http://oldschool.scripting.com/jack@baty.net/">Daily</a></li>
+					<li class="nav-item"><a href="https://daily.baty.net/">Daily</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -68,5 +68,6 @@
 
 		</div> <!-- /container -->
 		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
+		<script src="https://tinylytics.app/embed/uyf-fc8iNz6N3kmnRreZ.js" defer></script>
 	</body>
 </html>

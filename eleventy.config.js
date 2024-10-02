@@ -1,15 +1,19 @@
-const { DateTime } = require("luxon");
-const markdownIt = require("markdown-it");
-const markdownItFootnote = require("markdown-it-footnote");
-const markdownItAnchor = require("markdown-it-anchor");
+import { IdAttributePlugin, InputPathToUrlTransformPlugin, EleventyHtmlBasePlugin } from "@11ty/eleventy";
+import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import pluginBundle from "@11ty/eleventy-plugin-bundle";
+import pluginNavigation from "@11ty/eleventy-navigation";
+import { DateTime } from "luxon";
+import markdownIt from "markdown-it";
+import markdownItFootnote from "markdown-it-footnote";
+import markdownItAnchor from "markdown-it-anchor";
+import markdownItGitHubAlerts from 'markdown-it-github-alerts';
 
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const pluginBundle = require("@11ty/eleventy-plugin-bundle");
-const pluginNavigation = require("@11ty/eleventy-navigation");
-const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
-module.exports = function(eleventyConfig) {
+
+
+export default async function(eleventyConfig) {
+
 	// Copy the contents of the `public` folder to the output folder
 	// For example, `./public/css/` ends up in `_site/css/`
 	eleventyConfig.addPassthroughCopy({
@@ -24,12 +28,32 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
 
 	// App plugins
-	eleventyConfig.addPlugin(require("./eleventy.config.drafts.js"));
-	eleventyConfig.addPlugin(require("./eleventy.config.images.js"));
+	//eleventyConfig.addPlugin(require("./eleventy.config.drafts.js"));
+	//eleventyConfig.addPlugin(require("./eleventy.config.images.js"));
 
 
 	// Official plugins
-	eleventyConfig.addPlugin(pluginRss);
+
+	eleventyConfig.addPlugin(feedPlugin, {
+		type: "rss", // or "rss", "json"
+		outputPath: "/feed.xml",
+		collection: {
+			name: "posts", // iterate over `collections.posts`
+			limit: 10,     // 0 means no limit
+		},
+		metadata: {
+			language: "en",
+			title: "Baty.net",
+			subtitle: "Jack Baty's blog about everything.",
+			base: "https://baty.net/",
+			author: {
+				name: "Jack Baty",
+				email: "", // Optional
+			}
+		}
+	});
+
+
 	eleventyConfig.addPlugin(pluginSyntaxHighlight, {
 		preAttributes: { tabindex: 0 }
 	});
@@ -90,9 +114,11 @@ module.exports = function(eleventyConfig) {
 			level: [1,2,3,4],
 			slugify: eleventyConfig.getFilter("slugify")
 		});
+		mdLib.use(markdownItGitHubAlerts);
 	});
 
   eleventyConfig.amendLibrary("md", mdLib => mdLib.use(markdownItFootnote));
+
 
 
 	// Features to make your build faster (when you need them)

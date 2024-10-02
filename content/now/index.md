@@ -7,11 +7,17 @@ eleventyNavigation:
 
 # What I'm doing Now
 
-What I’m doing as of **February 22, 2023**
+Here are a few things I’m doing or learning or playing with these days[^thx]
 
-*   I'd like to go back to work. Hire me!
-*   Reading _The Overstory_ by Richard Powers
-*   Spending more time in the darkroom making silver gelatin prints
-*   Re-doing my blog in Eleventy.
+-   Making screens for drying fiber darkroom prints
+-   Reading “Pulphead” by John Jeremiah Sullivan
+-   Experimenting with using as few apps as possible
+-   Re-doing my blog in Eleventy.
 
-(Thanks to [Derek Sivers](https://sive.rs/) for the idea of [keeping a /now page](https://nownownow.com/about) like this one.)
+Watched Recently
+
+![](/img/watched.webp)
+
+Updated on Wednesday, October 2, 2024.
+
+[^thx]: (Thanks to [Derek Sivers](https://sive.rs/) for the idea of [keeping a /now page](https://nownownow.com/about) like this one.)

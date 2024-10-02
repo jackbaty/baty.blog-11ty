@@ -1,6 +1,6 @@
 /* Defaults */
 :root {
-	--font-family:  Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+	--font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
@@ -57,12 +57,12 @@ body {
 }
 
 #page-top {
-	/* background: url(https://static.baty.net/images/blog-headers/blue-plain.png) center no-repeat; */
+	background: url(https://static.baty.net/images/blog-headers/blue-plain.png) center no-repeat;
 
 	position: absolute;
     top: 0;
     left: 0;
-    height: 200px;
+    height: 150px;
     width: 100%;
     margin-left: 0;
     margin-top: 0;
@@ -79,7 +79,7 @@ body {
 #container {
 	max-width: 40em;
 	margin: 0 auto;
-	margin-top: 200px;
+	margin-top: 150px;
 }
 
 #site-title {
@@ -87,11 +87,11 @@ body {
 	width: 100%;
 	display: block;
 	text-align: center;
-	margin-top: 30px;
-    font-family: "Oswald";
+	margin-top: 15px;
+  font-family: "Oswald";
 	font-size: 8vw;
     font-weight: 700;
-    font-style: normal;
+
     letter-spacing: -0.01em;
     line-height: 1.1;
     margin-bottom: 0;
@@ -105,15 +105,14 @@ body {
 	width: 100%;
 	display: block;
 	text-align: center;
-	margin-top: 10px;
-    color: white;
+  color: white;
 	font-size: 20px;
 }
 
 img#hero-extra-image {
 	position: absolute;
     height: 100px;
-    top: 100px;
+    top: 50px;
     right: 0px;
 }
 
@@ -139,7 +138,6 @@ p {
 
 li {
 	line-height: 1.5;
-	font-size: 18px;
 }
 
 a[href] {
@@ -173,8 +171,22 @@ header:after {
 
 .links-nextprev {
 	list-style: none;
+	display: flex;
 	border-top: 1px dashed var(--color-gray-20);
 	padding: 1em 0;
+	margin-top: 3rem;
+}
+
+.links-nextprev li {
+		font-size: 0.9rem;
+}
+
+.links-nextprev .next, .links-nextprev .prev {
+	width: 50%;
+}
+
+.links-nextprev .next {
+	text-align: right;
 }
 
 table {
@@ -188,7 +200,7 @@ table th {
 pre,
 code {
 	font-family: var(--font-family-monospace);
-	font-size: 0.9em;
+	font-size: 0.8em;
 }
 pre:not([class*="language-"]) {
 	margin: .5em 0;
@@ -207,11 +219,11 @@ pre:not([class*="language-"]) {
 }
 code {
 	word-break: break-all;
-	font-size: 0.9em;
+	font-size: 0.8em;
 }
 
 code[class*="language-"] {
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 /* Header */
@@ -225,18 +237,33 @@ header {
 }
 
 .welcome {
-  /* padding-left: 1.5rem; */
+  position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	margin-bottom: 3em;
+	border-bottom: 1px solid var(--color-gray-50);
+	padding: 0 0 30px 20px;
 }
 
 .welcome h2 {
+  font-family: Oswald;
 	color: var(--color-gray-90);
-	font-size: 1.25em;
-	line-height: 1.6;
+	font-size: 34px;
+  line-height: 1.3;
 	margin-top: 1.0em;
 	margin-bottom: 0em;
+	font-weight: 400;
 	padding: 0;
 }
+
+.welcome p {
+  color: var(--color-gray-90);
+  margin-top: 0;
+}
+
+
 .home-link {
 	font-size: 1em; /* 16px /16 */
 	font-weight: 700;
@@ -266,6 +293,7 @@ header {
 
 h1.post-title {
     font-family: Oswald;
+    font-weight: 400;
     margin-bottom: 0;
 }
 
@@ -305,8 +333,12 @@ h1.post-title {
 }
 .postlist-link {
 	font-size: 1.1875em; /* 19px /16 */
-	font-weight: 700;
+	font-weight: 400;
 	padding-right: .5em;
+	text-decoration: none;
+}
+.postlist-link:hover {
+	text-decoration: underline;
 	text-underline-position: from-font;
 	text-underline-offset: 0;
 	text-decoration-thickness: 1px;
@@ -315,7 +347,10 @@ h1.post-title {
 	font-weight: bold;
 }
 li .postlist-link {
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 1rem;
+  text-decoration: underline;
+  line-height: 1.75;
 }
 
 figure {
@@ -356,6 +391,7 @@ section.footnotes p {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	font-size: 0.9rem;
 }
 .post-metadata time {
   margin-left: 0.5em;
@@ -407,4 +443,16 @@ a[href].header-anchor:focus,
 
 h2 + .header-anchor {
 	font-size: 1.5em;
+}
+
+.floatright {
+  float: right;
+}
+
+.post-content hr {
+	margin: 30px auto;
+  width: 20%;
+  background: var(--color-gray-50);
+  border: 0;
+  height: 1px;
 }

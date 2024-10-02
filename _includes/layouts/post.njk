@@ -6,6 +6,7 @@ layout: layouts/base.njk
 {% include "node_modules/prismjs/themes/prism-okaidia.css" %}
 {% include "static/css/prism-diff.css" %}
 {%- endcss %}
+<article class="post-content">
 <h1 class="post-title">{{ title }}</h1>
 
 <ul class="post-metadata">
@@ -18,13 +19,15 @@ layout: layouts/base.njk
 
 {{ content | safe }}
 
+</article>
+
 {%- if collections.posts %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}
 {%- set nextPost = collections.posts | getNextCollectionItem %}
 {%- if nextPost or previousPost %}
 <ul class="links-nextprev">
-	{%- if previousPost %}<li>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-	{%- if nextPost %}<li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+	{%- if previousPost %}<li class="prev">« Prev<br><a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+	{%- if nextPost %}<li class="next">Next »<br><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
 </ul>
 {%- endif %}
 {%- endif %}

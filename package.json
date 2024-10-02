@@ -1,6 +1,7 @@
 {
 	"name": "eleventy-base-blog",
 	"version": "8.0.0",
+	"type": "module",
 	"description": "A starter repository for a blog web site using the Eleventy site generator.",
 	"scripts": {
 		"build": "npx @11ty/eleventy",
@@ -32,16 +33,18 @@
 	},
 	"homepage": "https://github.com/11ty/eleventy-base-blog#readme",
 	"devDependencies": {
-		"@11ty/eleventy": "^2.0.0",
+		"@11ty/eleventy": "^3.0.0",
 		"@11ty/eleventy-img": "^3.0.0",
 		"@11ty/eleventy-navigation": "^0.3.5",
 		"@11ty/eleventy-plugin-bundle": "^1.0.1",
-		"@11ty/eleventy-plugin-rss": "^1.2.0",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
 		"luxon": "^3.2.1",
 		"markdown-it-anchor": "^8.6.6"
 	},
 	"dependencies": {
-		"markdown-it-footnote": "^3.0.3"
+		"@11ty/eleventy-plugin-rss": "^2.0.2",
+		"@11ty/eleventy-upgrade-help": "^3.0.1",
+		"markdown-it-footnote": "^3.0.3",
+		"markdown-it-github-alerts": "^0.3.0"
 	}
 }
