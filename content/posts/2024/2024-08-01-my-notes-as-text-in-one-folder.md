@@ -1,7 +1,7 @@
 ---
 title: My notes as text in one folder
 date:  2024-08-01T12:32:15-04:00
-tags: ["workflow","wilverbullet"]
+tags: ["workflow","silverbullet"]
 slug:
 summary:
 ---
