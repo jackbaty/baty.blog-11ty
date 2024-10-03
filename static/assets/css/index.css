@@ -400,7 +400,8 @@ figure p {
 figcaption {
   text-align: center;
   color: var(--color-gray-90);
-  margin-top: 10px; bd
+  margin-top: 10px;
+  font-size: 0.8rem;
 }
 
 section.footnotes p {
