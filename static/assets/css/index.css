@@ -375,7 +375,7 @@ h1.post-title {
 .postlist-date {
 	font-size: 0.8125em; /* 13px /16 */
 	font-weight: 300;
-	color: var(--color-gray-90);
+	color: var(--color-gray-50);
 }
 .postlist-date {
 	word-spacing: -0.5px;
