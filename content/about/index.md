@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 eleventyNavigation:
-  key: Hello
+  key: About
   order: 4
 ---
 
@@ -25,7 +25,7 @@ Here are my preferred ways of communicating. I’d love to hear from you.
 *   I’m on Mastodon [@jack@baty.social](https://baty.social/@jack).
 *   I’m no longer active on Twitter or Instagram or Facebook
 
-This information was last updated on Wednesday, October 2, 2024[^ht].
+This information was last updated on Wednesday, October 2, 2024
 
 # Find me (on social networks)
 
@@ -38,5 +38,11 @@ I'm still on a few social networks (or at least social-ish networks)
 * Twitter (defunct): https://twitter.com/@jackbaty
 * Instagram (defunct): https://instagram.com/mrjackbaty
 
+# About this website
 
-[^ht]: (h/t to Alistair Johnston for the idea of [Hello Pages](https://alastairjohnston.com/introducing-hello-pages/))
+As of October, 2024, I'm once again using Eleventy to generate this site. I cobbled together the theme myself. It needs work.
+
+Some other places:
+
+- [Changelog](/changelog) - What's changed
+- [Uses](/uses) - My life stack
