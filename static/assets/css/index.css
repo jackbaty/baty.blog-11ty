@@ -344,6 +344,7 @@ h1.post-title {
     font-family: Oswald;
     font-weight: 400;
     margin-bottom: 0;
+    font-size: 1.75em;
 }
 
 /* Posts list */
@@ -364,12 +365,13 @@ h1.post-title {
   margin-bottom: 4em;
 }
 
-.home-posts h2.postlist-item {
-
+.home-posts h2 a {
  font-family: Oswald;
+ font-size: 1.5em;
  margin-bottom: 0;
  padding-bottom: 0;
  margin-block-end: 0;
+ text-decoration: none;
 }
 
 .postlist-date {
@@ -507,6 +509,13 @@ h2 + .header-anchor {
 
 .floatright {
   float: right;
+}
+
+.post-content h2 {
+    font-family: Oswald;
+    font-weight: 400;
+    margin-bottom: 0;
+    font-size: 1.25em;
 }
 
 .post-content hr {
