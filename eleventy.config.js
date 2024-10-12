@@ -36,13 +36,23 @@ export default async function(eleventyConfig) {
 		}
 	});
 
+		// My Collections
+
+    // both posts and journals
+		eleventyConfig.addCollection(
+			"postsAndJournals",
+			function (collectionsApi) {
+				return collectionsApi.getFilteredByGlob(["content/posts/**/*.md","content/journals/**/*.md"]);
+			}
+		);
+
 	// Official plugins
 
 	eleventyConfig.addPlugin(feedPlugin, {
 		type: "rss", // or "rss", "json"
 		outputPath: "/index.xml",
 		collection: {
-			name: "posts", // iterate over `collections.posts`
+			name: "postsAndJournals", // iterate over `collections.posts`
 			limit: 10,     // 0 means no limit
 		},
 		metadata: {
@@ -64,6 +74,9 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginBundle);
+
+
+
 
 	// Filters
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
@@ -122,7 +135,6 @@ export default async function(eleventyConfig) {
 	});
 
   eleventyConfig.amendLibrary("md", mdLib => mdLib.use(markdownItFootnote));
-
 
 
 	// Features to make your build faster (when you need them)

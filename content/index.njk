@@ -2,10 +2,10 @@
 layout: layouts/home.njk
 numberOfLatestPostsToShow: 10
 ---
-{% set postsCount = collections.posts | length %}
+{% set postsCount = collections.postsAndJournals | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 
-{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+{% set postslist = collections.postsAndJournals | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
 <div class="home-posts">
 {% include "postslist-home.njk" %}
