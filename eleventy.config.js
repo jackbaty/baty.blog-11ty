@@ -52,7 +52,7 @@ export default async function(eleventyConfig) {
 		type: "rss", // or "rss", "json"
 		outputPath: "/index.xml",
 		collection: {
-			name: "postsAndJournals", // iterate over `collections.posts`
+			name: "postsAndJournals",
 			limit: 10,     // 0 means no limit
 		},
 		metadata: {
