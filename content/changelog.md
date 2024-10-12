@@ -13,6 +13,7 @@ Things change around here. This is a record of those changes[^start].
 
 <div class="compact">
 
+- `2024-10-12`: Added search page (Pagefind)
 - `2024-10-11`: Improved site logo and converted to webp
 - `2024-10-03`: Changed main font to Roboto Condensed. We'll see how it feels.
 - `2024-10-03`: CSS tweaks
