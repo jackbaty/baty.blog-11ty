@@ -1,8 +1,5 @@
 ---
 layout: layouts/page.njk
-eleventyNavigation:
-  key: Archives
-  order: 2
 ---
 <h1>Archive</h1>
 
