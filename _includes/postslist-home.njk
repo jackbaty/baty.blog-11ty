@@ -3,7 +3,14 @@
 <article class="post-content">
 	<h2>
 		<a href="{{ post.url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
-		<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL dd, yyyy") }}</time>
+
+{%- if post.data.weather %}
+	<time class="postlist-date">{{ post.data.weather }}</time>
+{%- else %}
+	<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+{%- endif %}
+
+
 
 
 {{ post.content | safe }}

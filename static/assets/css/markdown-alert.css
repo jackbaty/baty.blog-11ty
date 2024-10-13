@@ -1,10 +1,10 @@
 :root {
-  --color-note: #0969da;
-  --color-tip: #1a7f37;
-  --color-warning: #9a6700;
-  --color-severe: #bc4c00;
-  --color-caution: #d1242f;
-  --color-important: #8250df;
+  --color-note: 45, 104, 211;
+  --color-tip: 26, 127, 55;
+  --color-warning: 154, 103, 0;
+  --color-severe: 188, 76, 0;
+  --color-caution: 209, 36, 47;
+  --color-important: 130, 80, 223;
 }
 
 .markdown-alert {
@@ -13,6 +13,7 @@
   margin-top: 16px;
   color: inherit;
   border-left: .25em solid #888;
+  font-family: "RobotoCondensed";
 }
 
 .markdown-alert>:first-child {
@@ -39,36 +40,39 @@
 }
 
 .markdown-alert.markdown-alert-note {
-  border-left-color: var(--color-note);
+  border-left-color: rgb(var(--color-note));
+  background-color: rgba(var(--color-note), 0.10);
 }
 
 .markdown-alert.markdown-alert-note .markdown-alert-title {
-  color: var(--color-note);
-
+  color: rgb(var(--color-note));
 }
 
 .markdown-alert.markdown-alert-important {
   border-left-color: var(--color-important);
+  background-color: rgba(var(--color-important), 0.10);
 }
 
 .markdown-alert.markdown-alert-important .markdown-alert-title {
-  color: var(--color-important);
+  color: rgb(var(--color-important));
 }
 
 .markdown-alert.markdown-alert-warning {
   border-left-color: var(--color-warning);
+  background-color: rgba(var(--color-warning), 0.10);
 }
 
 .markdown-alert.markdown-alert-warning .markdown-alert-title {
-  color: var(--color-warning);
+  color: rgb(var(--color-warning));
 }
 
 .markdown-alert.markdown-alert-tip {
-  border-left-color: var(--color-tip);
+  border-left-color: rgb(var(--color-tip));
+  background-color: rgba(var(--color-tip), 0.10);
 }
 
 .markdown-alert.markdown-alert-tip .markdown-alert-title {
-  color: var(--color-tip);
+  color: rgb(var(--color-tip));
 }
 
 .markdown-alert.markdown-alert-caution {

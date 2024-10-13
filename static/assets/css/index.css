@@ -14,6 +14,8 @@
 
 	--text-color: var(--color-gray-90);
 	--text-color-link: #082840;
+	--text-color-link-content: #0000EE;
+	--text-color-link-content-visited: #551A8B;
 	--text-color-link-active: #5f2b48;
 	--text-color-link-visited: #17050F;
 
@@ -48,7 +50,7 @@ body {
 	padding: 0;
 	margin: 0 auto;
 	font-family: var(--font-family);
-	font-weight: 300;
+	font-weight: 400;
 	color: var(--text-color);
 	background-color: var(--background-color);
 }
@@ -146,7 +148,7 @@ p:last-child {
 }
 p {
 	line-height: 1.5;
-	font-size: 1rem;
+	font-size: 18px;
 }
 
 li {
@@ -524,4 +526,11 @@ h2 + .header-anchor {
   background: var(--color-gray-50);
   border: 0;
   height: 1px;
+}
+
+article.post-content p a {
+	color: var(--text-color-link-content);
+}
+article.post-content p a:visited {
+	color: var(--text-color-link-content-visited);
 }
