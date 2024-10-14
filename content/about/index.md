@@ -22,7 +22,7 @@ Hi there, my name is **Jack Baty** 👋.
 Here are my preferred ways of communicating. I’d love to hear from you.
 
 *   💌 For the last 30 years, the best way to connect with me has been via **email: [jack@baty.net](mailto:jack@baty.net)**. With any luck, this will continue for the next 30 years.
-*   I’m on Mastodon [@jack@baty.social](https://baty.social/@jack).
+*   I’m on Mastodon [@jbaty@social.lol](https://social.lol/@jbaty).
 *   I’m no longer active on Twitter or Instagram or Facebook
 
 This information was last updated on Wednesday, October 2, 2024
