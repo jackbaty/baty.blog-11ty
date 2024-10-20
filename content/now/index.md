@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.njk
+layout: layouts/page.njk
 eleventyNavigation:
   key: Now
   order: 5
@@ -9,10 +9,10 @@ eleventyNavigation:
 
 Here are a few things I’m doing or learning or playing with these days[^thx]
 
--   Making screens for drying fiber darkroom prints
--   Reading “Pulphead” by John Jeremiah Sullivan
+-   Playing with Neovim and LazyVim for notes/editing
+-   Reading “Pastoralia” by George Saunders
 -   Experimenting with using as few apps as possible
--   Re-doing my blog in Eleventy.
+-   Re-doing my blog in Eleventy. Trying to use just one blog.
 
 ## Watched Recently
 

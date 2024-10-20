@@ -1,6 +1,7 @@
 /* Defaults */
 :root {
 	--font-family: Roboto, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif;
+	--font-family-serif: Valkyrie, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
@@ -122,6 +123,7 @@ body {
 	text-align: center;
   color: white;
 	font-size: 20px;
+	font-family: var(--font-family);
 }
 
 img#hero-extra-image {
@@ -131,6 +133,9 @@ img#hero-extra-image {
     right: 0px;
 }
 
+header {
+	font-family: var(--font-family);
+}
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 .visually-hidden {
@@ -362,6 +367,11 @@ h1.post-title {
 	/* margin-bottom: 1em; */
 }
 
+article h1, article h2 {
+	font-family: Oswald;
+	font-weight: 400;
+}
+
 .home-posts article {
   padding-bottom: 2em;
   margin-bottom: 4em;
@@ -379,6 +389,7 @@ h1.post-title {
 .postlist-date {
 	font-size: 0.8125em; /* 13px /16 */
 	font-weight: 300;
+	font-family: var(--font-family);
 	color: var(--color-gray-50);
 }
 .postlist-date {
